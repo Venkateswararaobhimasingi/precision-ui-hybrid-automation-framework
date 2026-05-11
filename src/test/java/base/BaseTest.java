@@ -93,6 +93,7 @@ public class BaseTest {
 	public void tearDown() {
 
 		if (driver!= null) {
+			file.close();
             driver.get().quit();
             driver.remove();
             logger.info("Browser closed");
